@@ -11,12 +11,13 @@ class AudioPlayer:
     def __init__(self, logger: Logger):
         self.logger = logger
     
-    def save_audio(self, audio_data: bytes, format: str = 'mp3') -> Optional[str]:
+    def save_audio(self, audio_data: bytes, format: str = 'wav') -> Optional[str]:
         """
         Save audio data to temporary file
         Returns path to temporary file
         """
         try:
+            print("audio being saved.")
             temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=f'.{format}')
             temp_file.write(audio_data)
             temp_file.close()

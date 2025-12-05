@@ -86,6 +86,6 @@ def render_conversation(transcript: str, response: str, audio_file: str = None):
                 st.success(response)
             
             if audio_file:
-                st.audio(audio_file, format='audio/mp3')
+                st.audio(audio_file, format='audio/wav')
 
 
